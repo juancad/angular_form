@@ -1,0 +1,39 @@
+<mat-dialog-content class="mat-typography">
+  Modifica los datos de la inscripción:
+  <br /><br />
+  <form [formGroup]="form">
+    <input type="hidden" formControlName="$key">
+    <mat-form-field class="full-width">
+      <input formControlName="nombre" matInput placeholder="Nombre" value="{{inscripcion.nombre}}">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input formControlName="apellidos" matInput placeholder="Apellidos" value="{{inscripcion.apellidos}}">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input formControlName="universidad" matInput placeholder="Universidad" value="{{inscripcion.universidad}}">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input formControlName="titulacion" matInput placeholder="Titulación" value="{{inscripcion.titulacion}}">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input formControlName="email" matInput placeholder="email" value="{{inscripcion.email}}">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select formControlName="curso" placeholder="Selecciona un curso" [placeholder]="inscripcion.curso">
+        <ng-container *ngFor="let curso of cursos">
+          <mat-option value="{{curso}}">{{curso}}</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="edit()">Modificar</button>
+</mat-dialog-actions>

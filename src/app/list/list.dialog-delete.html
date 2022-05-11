@@ -1,0 +1,14 @@
+<mat-dialog-content class="mat-typography">
+  ¿Estás seguro de que deseas eliminar esta inscripción?:
+  <br/><br/>
+  <span>Nombre:</span> {{inscripcion.nombre}}  <br/>
+  <span>Apellidos:</span> {{inscripcion.apellidos}}  <br/>
+  <span>Universidad:</span> {{inscripcion.universidad}}  <br/>
+  <span>Titulación:</span> {{inscripcion.titulacion}}  <br/>
+  <span>Email:</span> {{inscripcion.email}}  <br/>
+  <span>Curso:</span> {{inscripcion.curso}}  <br/>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">Cancelar</button>
+  <button mat-button mat-dialog-close cdkFocusInitial>Aceptar</button>
+</mat-dialog-actions>

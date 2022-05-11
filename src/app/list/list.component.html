@@ -1,0 +1,21 @@
+<table class="inscripciones">
+    <tr></tr>
+    <tr *ngFor="let item of inscripcionesList">
+        <td> {{item.nombre}} </td>
+        <td> {{item.apellidos}} </td>
+        <td> {{item.universidad}} </td>
+        <td> {{item.titulacion}} </td>
+        <td> {{item.email}} </td>
+        <td> {{item.curso}} </td>
+        <td>
+            <button mat-mini-fab color="primary" (click)="openEditForm(item)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+        <td>
+            <button mat-mini-fab color="warn" (click)="delete(item)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+    </tr>
+</table>

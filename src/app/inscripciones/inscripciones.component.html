@@ -1,0 +1,46 @@
+<mat-card class="card">
+    <mat-card-title>Formulario de inscripción</mat-card-title>
+    <mat-card-subtitle>Rellene el formulario para añadir una nueva inscripción.</mat-card-subtitle>
+    <form [formGroup]="form">
+        <input type="hidden" formControlName="$key">
+        <p>
+            <mat-form-field class="full-width">
+                <input formControlName="nombre" matInput placeholder="Nombre">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="full-width">
+                <input formControlName="apellidos" matInput placeholder="Apellidos">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="full-width">
+                <input formControlName="universidad" matInput placeholder="Universidad">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="full-width">
+                <input formControlName="titulacion" matInput placeholder="Titulación">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="full-width">
+                <input formControlName="email" matInput placeholder="Email">
+                <mat-error>Introduce una dirección de correo electrónico válida.</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="full-width">
+                <mat-select formControlName="curso" placeholder="Selecciona un curso">
+                    <ng-container *ngFor="let curso of cursos">
+                        <mat-option value="{{curso}}">{{curso}}</mat-option>
+                    </ng-container>
+                </mat-select>
+            </mat-form-field>
+        </p>
+
+        <button mat-stroked-button color="primary" (click)="addInscripcion()" [disabled]="!form.valid">Añadir</button>
+        &nbsp;
+        <button mat-stroked-button color="warn" (click)="onClear()">Limpiar</button>
+    </form>
+</mat-card>
