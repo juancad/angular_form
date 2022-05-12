@@ -12,7 +12,7 @@ https://juancad.github.io/angular_form/
 ## 2. Requisitos<a name="requisitos"/>
 Para poder ejecutar el proyecto será necesario:
 - Tener instalado [Node.js](https://nodejs.org/es/download/).
-- Proyecto creado en Visual Studio.
+- Para este proyecto se ha utilizado el IDE Visual Studio.
 - Tener instalado npm, mediante el comando: `npm install -g @angular/cli`.
 - Importar el proyecto e instalar las dependencias del fichero package.json mediante el comando `npm install`.
 - Ejecutar el comando `ng serve` y abrir la dirección `http://localhost:4200/` en un navegador.
