@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 import { InscripcionesComponent } from './inscripciones/inscripciones.component';
 
@@ -21,6 +21,7 @@ import { ListComponent } from './list/list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DialogDelete } from './list/list.component';
 import { DialogEdit } from './list/list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DialogEdit } from './list/list.component';
     ListComponent,
     NavbarComponent,
     DialogDelete,
-    DialogEdit
+    DialogEdit,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,6 @@ import { DialogEdit } from './list/list.component';
     MatIconModule,
     MatDialogModule,
     MatCardModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

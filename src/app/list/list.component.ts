@@ -3,7 +3,7 @@ import { Inscripcion } from '../inscripcion.model';
 import { InscripcionesService } from '../inscripciones.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
-import { MatTestDialogOpenerModule } from '@angular/material/dialog/testing';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-list',
@@ -11,32 +11,27 @@ import { MatTestDialogOpenerModule } from '@angular/material/dialog/testing';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  inscripcionesList!: Array<Inscripcion>;
+  inscripcionesList = this.inscripcionesService.getInscripciones();
 
   constructor(
     private inscripcionesService: InscripcionesService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
-    this.loadInscripciones();
-  }
-
-  loadInscripciones(): void {
-    this.inscripcionesList = this.inscripcionesService.getInscripciones();
   }
 
   delete(inscripcion: Inscripcion) {
-    const dialogRef =  this.dialog.open(DialogDelete);
+    const dialogRef = this.dialog.open(DialogDelete);
     dialogRef.componentInstance.inscripcion = inscripcion;
-   
+
     dialogRef.afterClosed().subscribe(result => {
       if (!`${result}`) this.inscripcionesService.delete(inscripcion);
     });
   }
 
   openEditForm(inscripcion: Inscripcion) {
-    const dialogRef =  this.dialog.open(DialogEdit);
+    const dialogRef = this.dialog.open(DialogEdit);
     dialogRef.componentInstance.inscripcion = inscripcion;
   }
 }
@@ -53,6 +48,7 @@ export class DialogDelete implements OnInit {
   ngOnInit(): void {
   }
 }
+
 
 @Component({
   selector: 'dialog-edit',

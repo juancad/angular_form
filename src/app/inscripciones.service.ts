@@ -12,6 +12,18 @@ export class InscripcionesService {
     },
     {
       nombre: "Ejemplo", apellidos: "Apellido1 Apellido2", universidad: "Universidad de Ejemplo", titulacion: "Grado en Ingeniería Informática", email: "ejemplo@gmail.com", curso: "Primero"
+    },
+    {
+      nombre: "Ejemplo2", apellidos: "Apellido1 Apellido2", universidad: "Universidad de Ejemplo", titulacion: "Grado en Ingeniería Informática", email: "ejemplo2@gmail.com", curso: "Segundo"
+    },
+    {
+      nombre: "Ejemplo3", apellidos: "Apellido1 Apellido2", universidad: "Universidad de Ejemplo", titulacion: "Grado en Ingeniería Informática", email: "ejemplo3@gmail.com", curso: "Tercero"
+    },
+    {
+      nombre: "Ejemplo4", apellidos: "Apellido1 Apellido2", universidad: "Universidad de Ejemplo", titulacion: "Grado en Ingeniería Informática", email: "ejemplo4@gmail.com", curso: "Cuarto"
+    },
+    {
+      nombre: "Ejemplo5", apellidos: "Apellido1 Apellido2", universidad: "Universidad de Ejemplo", titulacion: "Grado en Ingeniería Informática", email: "ejemplo5@gmail.com", curso: "Cuarto"
     }
   ]
 
